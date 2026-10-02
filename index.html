@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Persistencia_PFE - Minha Localização</title>
+
+    <!-- Estilos do mapa MapLibre -->
+    <link
+        href="https://unpkg.com/maplibre-gl@5.6.1/dist/maplibre-gl.css"
+        rel="stylesheet"
+    >
+
+    <!-- Nosso arquivo CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>📍 Minha Localização</h1>
+        <p>Consulte sua localização e salve suas coordenadas!</p>
+    </header>
+
+    <main>
+
+        <!-- PAINEL DE GPS -->
+        <section class="gps-container">
+            <h2>🌎 Painel GPS</h2>
+
+            <p id="status" role="status" aria-live="polite">
+                Clique no botão abaixo para obter sua localização.
+            </p>
+
+            <div class="coordenadas">
+                <div class="coordenada">
+                    <h3>Latitude</h3>
+                    <p id="latitude">Aguardando...</p>
+                </div>
+
+                <div class="coordenada">
+                    <h3>Longitude</h3>
+                    <p id="longitude">Aguardando...</p>
+                </div>
+            </div>
+
+            <button type="button" id="btnLocalizacao">
+                📍 Obter minha localização
+            </button>
+        </section>
+
+        <!-- MAPA INTERATIVO -->
+        <section class="mapa-container">
+            <h2>🗺️ Mapa Interativo</h2>
+
+            <p>
+                Quando a localização for obtida, o mapa será centralizado
+                no local indicado pelo GPS.
+            </p>
+
+            <div
+                id="mapa"
+                role="application"
+                aria-label="Mapa interativo da localização"
+            ></div>
+        </section>
+
+        <!-- ÚLTIMA LOCALIZAÇÃO SALVA -->
+        <section class="ultima-container">
+            <h2>💾 Última Localização Salva</h2>
+
+            <p id="ultimaLocalizacao" aria-live="polite">
+                Nenhuma localização foi salva ainda.
+            </p>
+        </section>
+
+        <!-- ARRASTAR E SOLTAR -->
+        <section class="persistencia-container">
+            <h2>🧪 Teste de Persistência</h2>
+
+            <p>
+                Arraste o papel até a lixeira para apagar a localização
+                armazenada no navegador.
+            </p>
+
+            <div class="area-arrastar">
+
+                <div
+                    id="papel"
+                    class="papel"
+                    draggable="true"
+                    role="button"
+                    aria-label="Papel arrastável"
+                    tabindex="0"
+                >
+                    📄
+                    <span>Papel</span>
+                </div>
+
+                <div
+                    id="lixeira"
+                    class="lixeira"
+                    aria-label="Solte o papel aqui para apagar os dados"
+                >
+                    🗑️
+                    <span>Lixeira</span>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>
+            Projeto escolar Persistencia_PFE
+        </p>
+
+        <p>
+            Mapas por
+            <a href="https://openfreemap.org/" target="_blank" rel="noopener noreferrer">
+                OpenFreeMap
+            </a>
+            /
+            <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">
+                OpenStreetMap
+            </a>
+        </p>
+    </footer>
+
+    <!-- Biblioteca do mapa -->
+    <script src="https://unpkg.com/maplibre-gl@5.6.1/dist/maplibre-gl.js"></script>
+
+    <!-- Nosso arquivo JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
+

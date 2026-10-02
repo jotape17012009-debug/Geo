@@ -1,0 +1,425 @@
+/* ================================= */
+/* RESET */
+/* ================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ================================= */
+/* BODY */
+/* ================================= */
+
+body {
+
+    font-family: Arial, sans-serif;
+
+    background-color: #e8f1f8;
+
+    color: #222;
+
+    min-height: 100vh;
+}
+
+
+/* ================================= */
+/* CABEÇALHO */
+/* ================================= */
+
+header {
+
+    background-color: #1565c0;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 30px 20px;
+}
+
+
+header h1 {
+
+    font-size: 32px;
+
+    margin-bottom: 8px;
+}
+
+
+header p {
+
+    font-size: 17px;
+}
+
+
+/* ================================= */
+/* CONTEÚDO */
+/* ================================= */
+
+main {
+
+    width: 90%;
+
+    max-width: 900px;
+
+    margin: 30px auto;
+}
+
+
+/* ================================= */
+/* SEÇÕES */
+/* ================================= */
+
+section {
+
+    background-color: white;
+
+    border-radius: 15px;
+
+    padding: 25px;
+
+    margin-bottom: 25px;
+
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.10);
+}
+
+
+section h2 {
+
+    color: #1565c0;
+
+    margin-bottom: 15px;
+
+    font-size: 24px;
+}
+
+
+/* ================================= */
+/* GPS */
+/* ================================= */
+
+.gps {
+
+    text-align: center;
+}
+
+
+#status {
+
+    margin-bottom: 20px;
+
+    color: #555;
+}
+
+
+/* ================================= */
+/* COORDENADAS */
+/* ================================= */
+
+.coordenadas {
+
+    display: flex;
+
+    gap: 20px;
+
+    margin-bottom: 25px;
+}
+
+
+.coordenada {
+
+    flex: 1;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    background-color: #263238;
+
+    color: white;
+
+    padding: 20px;
+
+    border-radius: 12px;
+
+    text-align: left;
+}
+
+
+.icone {
+
+    font-size: 30px;
+}
+
+
+.coordenada strong {
+
+    color: #90caf9;
+
+    display: block;
+
+    margin-bottom: 5px;
+}
+
+
+.coordenada p {
+
+    color: #4fc3f7;
+
+    font-weight: bold;
+
+    word-break: break-all;
+}
+
+
+/* ================================= */
+/* BOTÃO */
+/* ================================= */
+
+button {
+
+    border: none;
+
+    background-color: #1565c0;
+
+    color: white;
+
+    padding: 14px 22px;
+
+    border-radius: 8px;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+button:hover {
+
+    background-color: #0d47a1;
+
+    transform: scale(1.03);
+}
+
+
+/* ================================= */
+/* MAPA */
+/* ================================= */
+
+.mapa-section p {
+
+    margin-bottom: 15px;
+
+    color: #555;
+}
+
+
+#mapa {
+
+    width: 100%;
+
+    height: 450px;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    border: 2px solid #90caf9;
+}
+
+
+/* ================================= */
+/* ÚLTIMA LOCALIZAÇÃO */
+/* ================================= */
+
+.ultima-localizacao {
+
+    text-align: center;
+}
+
+
+#ultimaLocalizacao {
+
+    background-color: #e3f2fd;
+
+    color: #1565c0;
+
+    padding: 18px;
+
+    border-radius: 10px;
+
+    font-weight: bold;
+
+    line-height: 1.5;
+}
+
+
+/* ================================= */
+/* DRAG AND DROP */
+/* ================================= */
+
+.drag-area {
+
+    text-align: center;
+}
+
+
+.drag-area > p {
+
+    color: #555;
+
+    margin-bottom: 10px;
+}
+
+
+.area-jogo {
+
+    position: relative;
+
+    height: 250px;
+
+    border: 2px dashed #90caf9;
+
+    border-radius: 12px;
+
+    margin-top: 20px;
+
+    background-color: #f8fbff;
+}
+
+
+/* ================================= */
+/* PAPEL E LIXEIRA */
+/* ================================= */
+
+.item {
+
+    position: absolute;
+
+    font-size: 55px;
+
+    cursor: grab;
+
+    user-select: none;
+
+    transition: 0.2s;
+}
+
+
+.item:active {
+
+    cursor: grabbing;
+}
+
+
+#papel {
+
+    left: 15%;
+
+    top: 80px;
+}
+
+
+#lixeira {
+
+    right: 15%;
+
+    top: 80px;
+}
+
+
+/* ================================= */
+/* DESTAQUE DA LIXEIRA */
+/* ================================= */
+
+#lixeira.destino {
+
+    background-color: #ffebee;
+
+    border-radius: 15px;
+
+    padding: 8px;
+
+    transform: scale(1.2);
+}
+
+
+/* ================================= */
+/* RODAPÉ */
+/* ================================= */
+
+footer {
+
+    background-color: #1565c0;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 20px;
+
+    margin-top: 30px;
+}
+
+
+footer p {
+
+    margin: 5px;
+}
+
+
+/* ================================= */
+/* RESPONSIVIDADE */
+/* ================================= */
+
+@media (max-width: 700px) {
+
+    main {
+
+        width: 95%;
+    }
+
+
+    section {
+
+        padding: 20px;
+    }
+
+
+    .coordenadas {
+
+        flex-direction: column;
+    }
+
+
+    #mapa {
+
+        height: 350px;
+    }
+
+
+    .item {
+
+        font-size: 45px;
+    }
+
+
+    #papel {
+
+        left: 10%;
+    }
+
+
+    #lixeira {
+
+        right: 10%;
+    }
+}
